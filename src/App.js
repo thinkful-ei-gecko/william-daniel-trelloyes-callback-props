@@ -8,7 +8,10 @@ export default class App extends React.Component {
   state = this.props.store
   
     handleDeleteCard = (id)  => {
-      const newCards = this.state.lists[0].cardIds.filter(card => card.id !== id)
+      // console.log(this.state.lists[0].cardIds);
+      
+      const newCards = this.state.lists[0].cardIds.filter((array, index) => array[index] === id)
+      console.log(newCards);
         this.setState({
           allCards: newCards
         })
