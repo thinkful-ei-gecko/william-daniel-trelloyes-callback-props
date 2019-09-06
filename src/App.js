@@ -7,15 +7,14 @@ export default class App extends React.Component {
 
   state = this.props.store
   
-    handleDeleteCard = (id)  => {
-      // console.log(this.state.lists[0].cardIds);
-      
-      const newCards = this.state.lists[0].cardIds.filter((array, index) => array[index] === id)
-      console.log(newCards);
-        this.setState({
-          allCards: newCards
-        })
-    }
+    handleDeleteCard = (cardId)  => {
+      const {lists} = this.store
+      const {cardIds} = this.store
+
+      const newCard = cardIds.filter(card => card.id !== cardId)
+      console.log(newCard)
+
+      }
   
 
   render() {
