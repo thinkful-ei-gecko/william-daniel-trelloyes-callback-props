@@ -1,20 +1,40 @@
 import React from 'react';
 import List from './List';
 import './App-styles.css';
-//Import List component
+import STORE from './store.js'
+
+function omit(obj, keyToOmit) {
+  return Object.entries(obj).reduce(
+    (newObj, [key, value]) =>
+        key === keyToOmit ? newObj : {...newObj, [key]: value},
+    {}
+  );
+}
+
 
 export default class App extends React.Component {
 
-  state = this.props.store
+  state = STORE
+  
   
     handleDeleteCard = (cardId)  => {
-      const {lists} = this.store
-      const {cardIds} = this.store
-
-      const newCard = cardIds.filter(card => card.id !== cardId)
-      console.log(newCard)
-
-      }
+      const { lists, allCards } = this.state;
+      console.log(lists)
+      console.log(allCards)
+      console.log(cardId)
+      const newLists = lists.map(list => ({
+        ...list,
+        cardIds: list.cardIds.filter(id => id !== cardId)
+      }));
+  
+      const newCards = omit(allCards, cardId);
+  
+      this.setState({
+          lists: newLists,
+          allCards: newCards
+      })
+      console.log(this.state)
+    };
   
 
   render() {

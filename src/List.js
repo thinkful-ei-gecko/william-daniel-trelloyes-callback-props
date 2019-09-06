@@ -13,7 +13,8 @@ export default function List (props) {
        {props.cards.map(card => 
        <Card 
         title={card.title}
-        content={card.content} 
+        content={card.content}
+        id={card.id} 
         key={card.id} 
         onDeleteCard={props.onDeleteCard}
         />
