@@ -8,6 +8,7 @@ export default function List (props) {
     <section className='List'>
       <header className="List-header">
         <h2>{props.header}</h2>
+        <button type="button" onClick={() => {props.onAddRandomCard(props.id)}}>add</button>
       </header>
       <div className="List-cards">
        {props.cards.map(card => 
