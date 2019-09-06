@@ -8,7 +8,7 @@ const STORE = {
       {
         id: '2',
         header: 'Second list',
-        cardIds: ['b', 'c', 'd', 'f', 'h', 'i', 'k'],
+        cardIds: ['a', 'b', 'c', 'd', 'f', 'h', 'i', 'k'],
       },
       {
         id: '3',

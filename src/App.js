@@ -15,6 +15,10 @@ function omit(obj, keyToOmit) {
 export default class App extends React.Component {
 
   state = STORE
+
+    handleRandomAdd = () => {
+      console.log('Random Add ran')
+    }
   
   
     handleDeleteCard = (cardId)  => {
