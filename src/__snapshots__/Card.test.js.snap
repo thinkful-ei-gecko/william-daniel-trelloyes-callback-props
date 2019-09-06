@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component nothing in the UI has changed 1`] = `
+<div
+  className="Card"
+>
+  <button
+    type="button"
+  >
+    delete
+  </button>
+  <h3>
+    title
+  </h3>
+  <p>
+    content
+  </p>
+</div>
+`;
+
+exports[`nothing in the UI has changed 1`] = `
+<div
+  className="Card"
+>
+  <button
+    type="button"
+  >
+    delete
+  </button>
+  <h3>
+    title
+  </h3>
+  <p>
+    content
+  </p>
+</div>
+`;
